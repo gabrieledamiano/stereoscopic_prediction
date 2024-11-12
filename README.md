@@ -1,9 +1,3 @@
-Ecco il README aggiornato con le informazioni aggiuntive:
-
----
-
-# Stereoscopic Prediction
-
 ## Predizione dell'Immagine Stereoscopica con Reti Convoluzionali
 
 Questo progetto utilizza un modello di rete convoluzionale encoder-decoder per prevedere l'immagine destra in un setup stereoscopico partendo da una singola immagine RGB (camera sinistra). Il dataset utilizzato è **Flickr1024**, caratterizzato da immagini di scena sinistra (con suffisso `_L`) e destra (con suffisso `_R`). Il modello è stato addestrato con una funzione di perdita combinata di **SSIM** e **RMSE** per migliorare la qualità della previsione.
@@ -32,7 +26,7 @@ pip install tensorflow opencv-python numpy matplotlib scikit-image pillow gdown 
 - `gdown`: per scaricare dataset direttamente da Google Drive, se necessario.
 - `tqdm`: per le barre di avanzamento durante l’elaborazione.
 - `json`: per salvare e caricare configurazioni e risultati.
-  
+
 **Note**: La lista completa dei pacchetti importati è `os, cv2, numpy, tensorflow, matplotlib.pyplot, ImageDataGenerator, EarlyStopping, ModelCheckpoint, ReduceLROnPlateau, train_test_split, tqdm, json, load_model, random`.
 
 ## Struttura del Progetto
@@ -47,6 +41,7 @@ All'inizio, il progetto richiede solo la cartella **dataset/Flickr1024**, organi
 │   ├── Test/                               # Dataset di test
 │   ├── Validation/                         # Dataset di validazione
 │   └── Training/                           # Dataset di addestramento
+├── ProgettoVP_Autoencoder.ipynb            # Notebook Jupyter contenente il codice
 ```
 
 ### Organizzazione delle immagini
@@ -93,7 +88,7 @@ pip install tensorflow opencv-python numpy matplotlib scikit-image pillow gdown 
 - Sostituire `TuoPercorso` con il percorso effettivo della cartella che contiene il dataset. Il percorso completo sarà concatenato a `"dataset/Flickr1024"` per indicare la posizione effettiva del dataset.
 
 ### 4. Addestramento del modello
-- Per addestrare il modello, eseguire il notebook o il file di script configurato.
+- Per addestrare il modello, eseguire il notebook `ProgettoVP_Autoencoder.ipynb` o il file di script configurato.
 - Durante l'addestramento, il modello utilizzerà le immagini nel dataset `Training` e validerà le prestazioni con il set `Validation`.
 
 ### 5. Valutazione su immagini di test
@@ -109,8 +104,8 @@ pip install tensorflow opencv-python numpy matplotlib scikit-image pillow gdown 
 
 ## Esecuzione del codice
 
-Eseguire tutte le celle nel notebook o eseguire il file Python per addestrare il modello e visualizzare i risultati.
+Eseguire tutte le celle nel notebook `ProgettoVP_Autoencoder.ipynb` o eseguire il file Python per addestrare il modello e visualizzare i risultati.
 
 ---
 
-Questo README è strutturato per fornire tutte le informazioni necessarie a impostare il progetto in un ambiente di sviluppo, gestire facilmente le dipendenze e il dataset, e utilizzare un modello preaddestrato per il test.
+Questo README è strutturato per fornire tutte le informazioni necessarie a impostare il progetto in un ambiente di sviluppo, gestire facilmente le dipendenze e il dataset, utilizzare un modello preaddestrato per il test e lavorare con il notebook Jupyter `ProgettoVP_Autoencoder.ipynb`.
