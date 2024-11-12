@@ -1,6 +1,10 @@
-# stereoscopic_prediction
+Ecco il README aggiornato con le informazioni aggiuntive:
 
-# Predizione dell'Immagine Stereoscopica con Reti Convoluzionali
+---
+
+# Stereoscopic Prediction
+
+## Predizione dell'Immagine Stereoscopica con Reti Convoluzionali
 
 Questo progetto utilizza un modello di rete convoluzionale encoder-decoder per prevedere l'immagine destra in un setup stereoscopico partendo da una singola immagine RGB (camera sinistra). Il dataset utilizzato è **Flickr1024**, caratterizzato da immagini di scena sinistra (con suffisso `_L`) e destra (con suffisso `_R`). Il modello è stato addestrato con una funzione di perdita combinata di **SSIM** e **RMSE** per migliorare la qualità della previsione.
 
@@ -16,7 +20,7 @@ Prima di eseguire il progetto, assicurarsi di avere:
 Assicurarsi di installare le seguenti librerie per eseguire il progetto. Utilizzare il comando:
 
 ```bash
-pip install tensorflow opencv-python numpy matplotlib scikit-image pillow gdown
+pip install tensorflow opencv-python numpy matplotlib scikit-image pillow gdown tqdm
 ```
 
 ### Librerie principali utilizzate:
@@ -83,9 +87,10 @@ pip install tensorflow opencv-python numpy matplotlib scikit-image pillow gdown 
 ### 3. Configurazione del percorso del dataset
 - Assicurarsi che il percorso del dataset sia specificato correttamente nel codice:
   ```python
-  dataset_dir = "path/to/dataset/Flickr1024"
+  base_dir = r'C:/TuoPercorso'  # Modificare questa variabile per cambiare la base del percorso
+  dataset_dir = os.path.join(base_dir, "dataset/Flickr1024")
   ```
-- Sostituire `"path/to/dataset/Flickr1024"` con il percorso effettivo della cartella `dataset/Flickr1024`.
+- Sostituire `TuoPercorso` con il percorso effettivo della cartella che contiene il dataset. Il percorso completo sarà concatenato a `"dataset/Flickr1024"` per indicare la posizione effettiva del dataset.
 
 ### 4. Addestramento del modello
 - Per addestrare il modello, eseguire il notebook o il file di script configurato.
@@ -98,10 +103,14 @@ pip install tensorflow opencv-python numpy matplotlib scikit-image pillow gdown 
 ### Opzioni di Salvataggio e Checkpoint
 - Il modello e le metriche vengono salvati automaticamente utilizzando callback come `ModelCheckpoint` e `EarlyStopping` per evitare il sovra-allenamento.
 
+## Modello Preaddestrato
+
+È disponibile un modello preaddestrato nel file `complete_autoencoder_combined_ssim_rmse.keras`, che può essere utilizzato per verificare il codice e valutare la qualità delle predizioni senza eseguire un nuovo addestramento. Questo file `.keras` fa riferimento a un modello già addestrato che consente un rapido test e verifica del codice.
+
 ## Esecuzione del codice
 
-Eseguire tutte le celle nel notebook o eseguire il file Python per addestrare il modello e visualizzare i risultati. 
+Eseguire tutte le celle nel notebook o eseguire il file Python per addestrare il modello e visualizzare i risultati.
 
 ---
 
-Questo README è organizzato per fornire tutte le informazioni necessarie a impostare il progetto in un ambiente di sviluppo e permette di gestire facilmente le dipendenze e il dataset.
+Questo README è strutturato per fornire tutte le informazioni necessarie a impostare il progetto in un ambiente di sviluppo, gestire facilmente le dipendenze e il dataset, e utilizzare un modello preaddestrato per il test.
