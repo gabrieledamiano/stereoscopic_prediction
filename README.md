@@ -87,6 +87,12 @@ pip install tensorflow opencv-python numpy matplotlib scikit-image pillow gdown 
   ```
 - Sostituire `TuoPercorso` con il percorso effettivo della cartella che contiene il dataset. Il percorso completo sarà concatenato a `"dataset/Flickr1024"` per indicare la posizione effettiva del dataset.
 
+### Download del Dataset
+Il dataset **Flickr1024** può essere scaricato automaticamente direttamente dal notebook `ProgettoVP_Autoencoder.ipynb`. Il notebook contiene una funzione che utilizza l’ID del file di Google Drive per scaricare e decomprimere il dataset nella cartella `dataset/Flickr1024`, organizzando il contenuto nelle cartelle `Test`, `Validation` e `Training`. 
+
+> **Nota**: Il dataset viene scaricato solo se non è già presente in locale nella struttura di cartelle specificata.
+
+
 ### 4. Addestramento del modello
 - Per addestrare il modello, eseguire il notebook `ProgettoVP_Autoencoder.ipynb` o il file di script configurato.
 - Durante l'addestramento, il modello utilizzerà le immagini nel dataset `Training` e validerà le prestazioni con il set `Validation`.
@@ -104,7 +110,7 @@ pip install tensorflow opencv-python numpy matplotlib scikit-image pillow gdown 
 
 ## Esecuzione del codice
 
-Eseguire tutte le celle nel notebook `ProgettoVP_Autoencoder.ipynb` o eseguire il file Python per addestrare il modello e visualizzare i risultati.
+Eseguire tutte le celle nel notebook `ProgettoVP_Autoencoder.ipynb` per addestrare il modello e visualizzare i risultati. 
 
 ---
 
