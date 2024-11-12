@@ -56,22 +56,37 @@ Ogni sottocartella (`Test`, `Validation`, `Training`) contiene immagini stereo c
 
 ### 1. Configurazione dell'ambiente virtuale
 
-**Opzione 1: Utilizzo di Anaconda**
-- Creare un nuovo ambiente con Python 3.12.5:
-  ```bash
-  conda create -n stereovision python=3.12.5
-  ```
-- Attivare l’ambiente:
-  ```bash
-  conda activate stereovision
-  ```
+È possibile configurare l’ambiente virtuale in due modi: tramite interfaccia grafica di Anaconda oppure tramite prompt di comando. 
 
-**Opzione 2: Ambiente virtuale con `venv`**
-- Creare e attivare un ambiente virtuale:
-  ```bash
-  python3 -m venv stereovision_env
-  source stereovision_env/bin/activate  # Su Windows: stereovision_env\Scripts\activate
-  ```
+#### Opzione 1: Utilizzo dell’interfaccia grafica di Anaconda
+
+1. **Aprire Anaconda Navigator**.
+2. **Selezionare la scheda "Environments"** nella barra laterale.
+3. **Cliccare su "Create"** per creare un nuovo ambiente.
+4. **Assegnare un nome all'ambiente** (ad esempio `stereovision`).
+5. Selezionare **Python 3.12.5** come versione del linguaggio.
+6. Cliccare su **"Create"** per avviare la creazione dell'ambiente. Anaconda impiegherà alcuni minuti per configurare l'ambiente con le librerie di base.
+7. Una volta completato, l'ambiente sarà pronto all’uso. È possibile installare ulteriori librerie nella sezione "Environments" utilizzando il comando pip o con il pulsante **"Open Terminal"** all'interno di Anaconda Navigator.
+
+#### Opzione 2: Creazione tramite Prompt di Comando di Anaconda
+
+1. Aprire il **Prompt di Anaconda**.
+2. Eseguire il seguente comando per creare un nuovo ambiente:
+   ```bash
+   conda create -n stereovision python=3.12.5
+   ```
+3. Attivare l’ambiente con:
+   ```bash
+   conda activate stereovision
+   ```
+
+#### Opzione 3: Ambiente virtuale con `venv` (Prompt di Comando)
+
+1. Creare e attivare un ambiente virtuale:
+   ```bash
+   python3 -m venv stereovision_env
+   source stereovision_env/bin/activate  # Su Windows: stereovision_env\Scripts\activate
+   ```
 
 ### 2. Installazione delle dipendenze
 Installare le librerie necessarie tramite pip:
