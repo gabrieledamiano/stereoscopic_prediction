@@ -41,7 +41,7 @@ All'inizio, il progetto richiede solo la cartella **dataset/Flickr1024**, organi
 │   ├── Test/                               # Dataset di test
 │   ├── Validation/                         # Dataset di validazione
 │   └── Training/                           # Dataset di addestramento
-├── ProgettoVP_Autoencoder.ipynb            # Notebook Jupyter contenente il codice
+├── progetto_stereovision.ipynb            # Notebook Jupyter contenente il codice
 ```
 
 ### Organizzazione delle immagini
@@ -103,13 +103,13 @@ pip install tensorflow opencv-python numpy matplotlib scikit-image pillow gdown 
 - Sostituire `TuoPercorso` con il percorso effettivo della cartella che contiene il dataset. Il percorso completo sarà concatenato a `"dataset/Flickr1024"` per indicare la posizione effettiva del dataset.
 
 ### Download del Dataset
-Il dataset **Flickr1024** può essere scaricato automaticamente direttamente dal notebook `ProgettoVP_Autoencoder.ipynb`. Il notebook contiene una funzione che utilizza l’ID del file di Google Drive per scaricare e decomprimere il dataset nella cartella `dataset/Flickr1024`, organizzando il contenuto nelle cartelle `Test`, `Validation` e `Training`. 
+Il dataset **Flickr1024** può essere scaricato automaticamente direttamente dal notebook `progetto_stereovision.ipynb`. Il notebook contiene una funzione che utilizza l’ID del file di Google Drive per scaricare e decomprimere il dataset nella cartella `dataset/Flickr1024`, organizzando il contenuto nelle cartelle `Test`, `Validation` e `Training`. 
 
 > **Nota**: Il dataset viene scaricato solo se non è già presente in locale nella struttura di cartelle specificata.
 
 
 ### 4. Addestramento del modello
-- Per addestrare il modello, eseguire il notebook `ProgettoVP_Autoencoder.ipynb` o il file di script configurato.
+- Per addestrare il modello, eseguire il notebook `progetto_stereovision.ipynb` o il file di script configurato.
 - Durante l'addestramento, il modello utilizzerà le immagini nel dataset `Training` e validerà le prestazioni con il set `Validation`.
 
 ### 5. Valutazione su immagini di test
@@ -125,8 +125,8 @@ Il dataset **Flickr1024** può essere scaricato automaticamente direttamente dal
 
 ## Esecuzione del codice
 
-Eseguire tutte le celle nel notebook `ProgettoVP_Autoencoder.ipynb` per addestrare il modello e visualizzare i risultati. 
+Eseguire tutte le celle nel notebook `progetto_stereovision.ipynb` per addestrare il modello e visualizzare i risultati. 
 
 ---
 
-Questo README è strutturato per fornire tutte le informazioni necessarie a impostare il progetto in un ambiente di sviluppo, gestire facilmente le dipendenze e il dataset, utilizzare un modello preaddestrato per il test e lavorare con il notebook Jupyter `ProgettoVP_Autoencoder.ipynb`.
+Questo README è strutturato per fornire tutte le informazioni necessarie a impostare il progetto in un ambiente di sviluppo, gestire facilmente le dipendenze e il dataset, utilizzare un modello preaddestrato per il test e lavorare con il notebook Jupyter `progetto_stereovision.ipynb`.
