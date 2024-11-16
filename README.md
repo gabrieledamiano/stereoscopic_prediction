@@ -14,7 +14,7 @@ Prima di eseguire il progetto, assicurarsi di avere:
 Assicurarsi di installare le seguenti librerie per eseguire il progetto. Utilizzare il comando:
 
 ```bash
-pip install tensorflow opencv-python numpy matplotlib scikit-image pillow gdown tqdm
+pip install tensorflow opencv-python numpy matplotlib scikit-image scikit-learn pillow gdown tqdm
 ```
 
 ### Librerie principali utilizzate:
